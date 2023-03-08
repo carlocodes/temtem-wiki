@@ -37,12 +37,12 @@ public class Type {
     private Set<Technique> techniques = new HashSet<>();
     @ManyToMany
     @JoinTable(name = "type_strength",
-    joinColumns = @JoinColumn(name = "type_id"),
-    inverseJoinColumns = @JoinColumn(name = "strength_id"))
+            joinColumns = @JoinColumn(name = "type_id"),
+            inverseJoinColumns = @JoinColumn(name = "strength_id"))
     private Set<Type> strengths = new HashSet<>();
     @ManyToMany
     @JoinTable(name = "type_weakness",
-    joinColumns = @JoinColumn(name = "type_id"),
-    inverseJoinColumns = @JoinColumn(name = "weakness_id"))
+            joinColumns = @JoinColumn(name = "type_id"),
+            inverseJoinColumns = @JoinColumn(name = "weakness_id"))
     private Set<Type> weaknesses = new HashSet<>();
 }
