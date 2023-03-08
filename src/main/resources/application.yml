@@ -1,0 +1,17 @@
+temtem-wiki:
+  project:
+    version: ^project.version^
+
+server:
+  port: 8080
+  servlet:
+    context-path: /temtem-wiki
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/temtem-wiki
+    username: root
+    password: J@d3d69420!
+  jpa:
+    hibernate:
+      ddl-auto: validate
