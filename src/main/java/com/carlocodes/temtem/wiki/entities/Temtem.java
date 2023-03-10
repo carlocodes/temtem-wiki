@@ -42,6 +42,11 @@ public class Temtem {
             joinColumns = @JoinColumn(name = "temtem_id"),
             inverseJoinColumns = @JoinColumn(name = "technique_id"))
     private Set<Technique> techniques = new HashSet<>();
+    @ManyToMany
+    @JoinTable(name = "temtem_trait",
+            joinColumns = @JoinColumn(name = "temtem_id"),
+            inverseJoinColumns = @JoinColumn(name = "trait_id"))
+    private Set<Trait> traits = new HashSet<>();
     @OneToMany(mappedBy = "temtem", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Statistic> statistics = new ArrayList<>();
 }
